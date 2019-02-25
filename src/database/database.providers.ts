@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import { DB_PROVIDER, DB_NAME, DB_PORT } from '../constants'; 
+import { DB_PROVIDER, DB_NAME, DB_PORT } from '../constants';
 
 export const databaseProviders = [
     {

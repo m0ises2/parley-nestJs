@@ -15,7 +15,7 @@ export class PostsController {
     }
 
     @Get()
-    async findAll() {
+    async findAll(): Promise<any> {
         let results = await this.postsService.findAll();
 
         return { results, total: results.length }
