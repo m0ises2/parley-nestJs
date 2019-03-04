@@ -12,5 +12,5 @@ export const PostSchema = new mongoose.Schema({
     userId: {
         type: mongoose.SchemaTypes.ObjectId,
         required: true,
-    }
+    },
 });

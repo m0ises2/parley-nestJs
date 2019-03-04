@@ -8,7 +8,9 @@ import { POST_MODEL_PROVIDER } from '../constants';
 @Injectable()
 export class PostsService {
     constructor(
-        @Inject(POST_MODEL_PROVIDER) private readonly postModel: Model<Post>) { }
+        @Inject(POST_MODEL_PROVIDER)
+        private readonly postModel: Model<Post>,
+    ) { }
 
     async create(createPostDto: CreatePostDto): Promise<Post> {
         const createdPost = new this.postModel(createPostDto);

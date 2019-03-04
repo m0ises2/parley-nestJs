@@ -9,15 +9,15 @@ export class PostsController {
 
     @Post()
     async create(@Body() createPostObject: CreatePostDto) {
-        let createdObject = await this.postsService.create(createPostObject);
+        const createdObject = await this.postsService.create(createPostObject);
 
-        return createdObject
+        return createdObject;
     }
 
     @Get()
     async findAll(): Promise<any> {
-        let results = await this.postsService.findAll();
+        const results = await this.postsService.findAll();
 
-        return { results, total: results.length }
+        return { results, total: results.length };
     }
 }
